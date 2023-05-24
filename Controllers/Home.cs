@@ -7,14 +7,13 @@ using Microsoft.AspNetCore.Mvc;
 public class HomeController : ControllerBase
 {
 
-
 LibreriaContext Dbcontext;
 
-
 public HomeController(LibreriaContext db){
-Dbcontext = db;
-
+Dbcontext=db;
 }
+
+
 
 [HttpGet]
 [Route("ConnDB")]

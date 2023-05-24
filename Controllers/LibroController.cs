@@ -22,6 +22,7 @@ public LibroController(ILibroService serviceLibro){
     [HttpPost]
     public async Task <IActionResult> ingresarLibros([FromBody] Libro nuevoLibro){
      await libroService.insertar(nuevoLibro);
+     var c= nuevoLibro.LibroId;
     return Ok("Datos Ingresados");
     }
 

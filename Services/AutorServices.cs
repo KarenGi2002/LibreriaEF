@@ -28,9 +28,9 @@ public class AutorService: IAutorService
     public async Task actualizar(Guid id, Autor inputAutor){
         var autor = context.Autor?.Find(id);
         if(autor != null){
-            autor.nombre=inputAutor.nombre;
-            autor.apellido=inputAutor.apellido;
-            autor.nacionalidad=inputAutor.nacionalidad;
+            autor.Nombre=inputAutor.Nombre;
+            autor.Apellido=inputAutor.Apellido;
+            autor.Nacionalidad=inputAutor.Nacionalidad;
 
             await context.SaveChangesAsync();
         }

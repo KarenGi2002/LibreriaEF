@@ -1,6 +1,8 @@
 
 using System.Net;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace libreria.Models;
 
 public class Autor{
@@ -9,13 +11,15 @@ public class Autor{
 
 [Required]
 [MaxLength(250)]
-    public String? nombre{get;set;}
+    public String? Nombre{get;set;}
 
 [MaxLength(250)]
- public String? apellido{get;set;}
+ public String? Apellido{get;set;}
 
 [MaxLength(100)]
-public String? nacionalidad{get;set;}
+public String? Nacionalidad{get;set;}
 
-    
+public virtual Libro? Libro {get;set;}
+
+
 }

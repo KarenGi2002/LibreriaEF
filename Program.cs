@@ -9,7 +9,8 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddSqlServer<LibreriaContext>("Data Source=localhost,1433; Initial Catalog=libreriaDb;user id=sa;password=r00t.R00T;Encrypt=False");
+
+builder.Services.AddSqlServer<LibreriaContext>("Data Source=localhost,1433; Initial Catalog=libreriaDB;user id=sa;password=r00t.R00t;Encrypt=False");
 builder.Services.AddScoped<IAutorService, AutorService>();
 builder.Services.AddScoped<IGeneroService, GeneroService>();
 builder.Services.AddScoped<ILibroService, libroService>();

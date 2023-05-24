@@ -21,7 +21,7 @@ public class AutorController: ControllerBase
     [HttpPost]
     public async Task <IActionResult> ingresarAutores([FromBody] Autor nuevoAutor){
         await autorService.insertar(nuevoAutor);
-        
+        var c= nuevoAutor.AutorId;
         return Ok();
     }
 
@@ -33,8 +33,8 @@ public class AutorController: ControllerBase
 
     //UPDATE
     [HttpPut("{id}")]
-    public IActionResult actualizarAutores([FromBody] Autor autorActualizar, Guid id){
-        autorService.actualizar(id,autorActualizar);
+    public async Task <IActionResult> actualizarAutores([FromBody] Autor autorActualizar, Guid id){
+        await autorService.actualizar(id,autorActualizar);
         return Ok();
     }
 

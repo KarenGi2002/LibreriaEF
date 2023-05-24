@@ -10,4 +10,5 @@ public Guid GeneroId{get;set;}
 [Required]
 public String? Nombre{get;set;}
 
+public virtual Libro? Libro {get;set;}
 }

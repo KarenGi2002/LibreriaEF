@@ -20,7 +20,7 @@ public class GeneroController: ControllerBase
     [HttpPost]
     public async Task <IActionResult> ingresarGeneros([FromBody] Genero nuevoGenero){
         await generoService.insertar(nuevoGenero);
-        
+        var c= nuevoGenero.GeneroId;
         return Ok();
     }
 
